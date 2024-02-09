@@ -1,0 +1,68 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f0f0f0;
+}
+
+.container {
+   max-width: 800px;
+   margin: 50px auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+   text-align: center;
+   color: #333;
+}
+
+#space-info {
+   margin-top: 20px;
+}
+
+#space-info {
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+#spaceships {
+   margin-top: 30px;
+   display: flex;
+   justify-content: space-around;
+}
+
+.spaceship {
+   width: 100px;
+   height: 100px;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+   position: relative;
+}
+
+.spaceship:hover {
+   transform: scale(1.5);
+}
+
+.spaceship:hover::before {
+   content: attr(data-info);
+   position: absolute;
+   top: -30px;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: #333;
+   color: #fff;
+   padding: 5px;
+   border-radius: 5px;
+   font-size: 12px;
+   opacity: 0.9;
+   white-space: nowrap;
+   display: block;
+}
